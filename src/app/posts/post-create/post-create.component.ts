@@ -9,8 +9,8 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./post-create.component.css'],
 })
 export class PostCreateComponent {
-  ErrorContent = 'Enter post content...';
-  ErrorTitleContent = 'Enter post title...';
+  ErrorContent = 'Please Enter post content...';
+  ErrorTitleContent = 'Please Enter post title...';
 
   constructor(private postService: PostService) {}
 
