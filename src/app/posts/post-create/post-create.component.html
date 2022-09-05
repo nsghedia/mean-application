@@ -1,0 +1,15 @@
+<mat-card>
+  <form (ngSubmit)="onSavePost(postform)" #postform="ngForm">
+    <mat-form-field>
+      <input matInput type="text" ngModel name="enterTitle" #enterTitle="ngModel" required minlength="4">
+      <mat-error *ngIf="enterTitle.invalid">{{ErrorTitleContent}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput rows="10" ngModel name="enterContent" #enterContent="ngModel" required
+        minlength="4"></textarea>
+      <mat-error *ngIf="enterContent.invalid">{{ErrorContent}}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!postform.valid">Save Post</button>
+  </form>
+</mat-card>
+<br>
